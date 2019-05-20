@@ -1,4 +1,5 @@
 import printMe from './print.js';
+import times from 'lodash/times';
 
 function component() {
     const element = document.createElement('div');
@@ -14,3 +15,4 @@ function component() {
 }
     
 document.body.appendChild(component());
+times(3, () => console.log('whee'));

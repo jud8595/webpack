@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 let config = {
     entry: {
@@ -10,6 +11,9 @@ let config = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management'
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerHost: '10.0.2.15'
         })
     ],
     output: {
